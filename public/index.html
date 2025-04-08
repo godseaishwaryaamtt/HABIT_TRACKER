@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="Interactive Splash App" />
+    <title>Interactive Splash App</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <div class="tile-container">
+      <div class="tile">
+        <img src="assets/jojo.png" alt="Josna">
+        <h3>Josna</h3>
+      </div>
+      <div class="tile">
+        <img src="assets/aish.png" alt="Aishwarya">
+        <h3>Aishwarya</h3>
+      </div>
+      <div class="tile">
+        <img src="assets/other.png" alt="Other">
+        <h3>Other</h3>
+      </div>
+    </div>
+    <div class="tile-container">
+      <div class="tile-card" onclick="flipCard(this)">
+        <div class="tile-inner">
+          <div class="tile-front">
+            <img src="assets/jojo.png" alt="Josna">
+            <h3>Josna</h3>
+          </div>
+          <div class="tile-back">
+            <p>Josna is a talented artist with a love for colors and creativity.</p>
+          </div>
+        </div>
+      </div>
+    
+      <div class="tile-card" onclick="flipCard(this)">
+        <div class="tile-inner">
+          <div class="tile-front">
+            <img src="assets/aish.png" alt="Aishwarya">
+            <h3>Aishwarya</h3>
+          </div>
+          <div class="tile-back">
+            <p>Aishwarya enjoys coding and robotics. She's full of ideas!</p>
+          </div>
+        </div>
+      </div>
+    
+      <div class="tile-card" onclick="flipCard(this)">
+        <div class="tile-inner">
+          <div class="tile-front">
+            <img src="assets/other.png" alt="Guest">
+            <h3>Other</h3>
+          </div>
+          <div class="tile-back">
+            <p>This is someone amazing too — always full of surprises.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+
+  </body>
+</html>
