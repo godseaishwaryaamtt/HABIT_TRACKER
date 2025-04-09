@@ -1,0 +1,188 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body, html, #root {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: sans-serif;
+  }
+  
+  .screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: #000;
+    color: #fff;
+  }
+  
+  .video-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    z-index: -1;
+  }
+  
+  .ready-bg {
+    background-image: url('C:/Users/ADMIN/Downloads/jojo1/public/ready_bg.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+  
+  .overlay-text {
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 20px;
+  }
+  
+  .button {
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.8);
+    border: none;
+    border-radius: 10px;
+  }
+  
+  .tiles {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .tile {
+    background: white;
+    color: black;
+    padding: 2rem;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    background-image: url('C:/Users/ADMIN/Downloads/jojo1/src/images/bg.png'); /* <-- Add this line */
+  background-size: cover;
+  background-position: center;
+  }
+  .tile-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+  }
+  
+  .tile {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    padding: 1rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 200px;
+    cursor: pointer;
+  }
+  
+  .tile img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .tile h3 {
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+  }
+  
+  .tile:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  }
+  
+  .tile:active img {
+    transform: scale(0.95);
+    filter: brightness(90%);
+  }
+  .tile {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.5s ease forwards;
+    animation-delay: var(--delay);
+  }
+  
+  .tile:nth-child(1) { --delay: 0s; }
+  .tile:nth-child(2) { --delay: 0.2s; }
+  .tile:nth-child(3) { --delay: 0.4s; }
+  
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+/*hehe*/
+.tile-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.tile-card {
+  width: 200px;
+  height: 260px;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.tile-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.tile-card.flipped .tile-inner {
+  transform: rotateY(180deg);
+}
+
+.tile-front, .tile-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  backface-visibility: hidden;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: box-shadow 0.3s;
+}
+
+.tile-front:hover {
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.tile-front img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.tile-front h3 {
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.tile-back {
+  background: #f0f0f0;
+  transform: rotateY(180deg);
+  text-align: center;
+  padding: 1rem;
+}
