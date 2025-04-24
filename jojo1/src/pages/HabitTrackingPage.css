@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+  @apply text-center min-h-screen p-5;
+  font-family: 'Press Start 2P', cursive;
+  background: url('/bbg.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #FFFFFF;
+}
+
+.title {
+  @apply text-2xl mb-3;
+}
+
+.subtitle {
+  @apply text-lg mb-5;
+}
+
+.coins {
+  @apply text-xl mb-5;
+}
+
+.add-habit {
+  @apply flex justify-center gap-3 mb-5;
+}
+
+.add-habit input {
+  @apply px-4 py-2 text-white bg-white border-2 border-white outline-none text-sm;
+  font-family: 'Press Start 2P', cursive;
+}
+
+.add-habit button {
+  @apply px-5 py-2 text-white bg-fuchsia-500 border-2 border-white text-sm cursor-pointer;
+  font-family: 'Press Start 2P', cursive;
+}
+
+.habit-list {
+  @apply flex flex-col gap-5;
+}
+
+.habit {
+  @apply flex justify-between items-center bg-black bg-opacity-70 border-2 border-white rounded-xl p-3;
+}
+
+.habit-info {
+  @apply text-left;
+}
+
+.habit-name {
+  @apply text-lg;
+}
+
+.habit-reward,
+.habit-penalty {
+  @apply text-sm;
+}
+
+.habit-actions button {
+  @apply px-3 py-1 text-sm cursor-pointer border-none;
+  font-family: 'Press Start 2P', cursive;
+}
+
+.habit-actions .done {
+  @apply bg-green-400 text-black;
+}
+
+.habit-actions .missed {
+  @apply bg-black-600 text-white;
+}
+
+.habit-actions .delete {
+  @apply bg-fuchsia-500 text-white;
+}

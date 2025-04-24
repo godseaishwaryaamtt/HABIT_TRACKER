@@ -1,0 +1,57 @@
+.tile-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+  }
+  
+  .tile {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    padding: 1rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 200px;
+    cursor: pointer;
+  }
+  
+  .tile img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .tile h3 {
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+  }
+  
+  .tile:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  }
+  
+  .tile:active img {
+    transform: scale(0.95);
+    filter: brightness(90%);
+  }
+  .tile {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.5s ease forwards;
+    animation-delay: var(--delay);
+  }
+  
+  .tile:nth-child(1) { --delay: 0s; }
+  .tile:nth-child(2) { --delay: 0.2s; }
+  .tile:nth-child(3) { --delay: 0.4s; }
+  
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
